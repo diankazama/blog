@@ -187,7 +187,7 @@ function displayToc(filter) {
 // this function creates a three-column table and adds it to the screen
    var numDisplayed = 0;
    var tocTable = '';
-   var tocHead1 = 'JUDUL POSTINGAN';
+   var tocHead1 = 'JUDUL';
    var tocTool1 = 'Klik untuk mengurutkan berdasarkan judul';
    var tocHead2 = 'TANGGAL';
    var tocTool2 = 'Klik untuk mengurutkan berdasarkan tanggal';
@@ -195,19 +195,19 @@ function displayToc(filter) {
    var tocTool3 = '';
    if (sortBy == "titleasc") { 
       tocTool1 += ' (descending)';
-      tocTool2 += ' (newest first)';
+      tocTool2 += ' (paling baru)';
    }
    if (sortBy == "titledesc") { 
       tocTool1 += ' (ascending)';
-      tocTool2 += ' (newest first)';
+      tocTool2 += ' (paling baru)';
    }
    if (sortBy == "dateoldest") { 
       tocTool1 += ' (ascending)';
-      tocTool2 += ' (newest first)';
+      tocTool2 += ' (paling baru)';
    }
    if (sortBy == "datenewest") { 
       tocTool1 += ' (ascending)';
-      tocTool2 += ' (oldest first)';
+      tocTool2 += ' (paling lama)';
    }
    if (postFilter != '') {
       tocTool3 = 'Click to show all posts';
@@ -238,7 +238,7 @@ function displayToc(filter) {
    }
    tocTable += '</table>';
    if (numDisplayed == postTitle.length) {
-      var tocNote = '<span class="toc-note">Menampilkan semua ' + postTitle.length + ' postingan<br/></span>'; }
+      var tocNote = '<span class="toc-note">Total ' + postTitle.length + ' artikel<br/></span>'; }
    else {
       var tocNote = '<span class="toc-note">Displaying ' + numDisplayed + ' posts labeled \'';
       tocNote += postFilter + '\' of '+ postTitle.length + ' posts total<br/></span>';
